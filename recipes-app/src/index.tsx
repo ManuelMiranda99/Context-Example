@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { BackgroundProvider } from "./components/organisms/Background/BackgroundContext/BackgroundContext";
 import Background from "./components/organisms/Background/Background";
 import { UserProvider } from "./shared/contexts/UserContext";
@@ -22,5 +21,3 @@ root.render(
     </UserProvider>
   </React.StrictMode>
 );
-
-reportWebVitals();
