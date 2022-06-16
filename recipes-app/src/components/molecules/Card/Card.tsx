@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { RecipeInterface } from "../../../shared/interfaces/RecipeInterface";
+import { Recipe } from "../../../shared/interfaces/Recipe.interface";
 
-const Card: FC<RecipeInterface> = ({ description, image, title }) => {
+const Card: FC<Recipe> = ({ description, image, title }) => {
   return (
     <div className="w-3/6 max-w-sm my-3 lg:max-w-full lg:flex">
       <div

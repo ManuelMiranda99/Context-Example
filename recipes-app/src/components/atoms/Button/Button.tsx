@@ -1,9 +1,5 @@
 import { FC } from "react";
-
-interface ButtonProps {
-  text: string;
-  onClick: () => void;
-}
+import { ButtonProps } from "../../../shared/interfaces/Button.interface";
 
 const Button: FC<ButtonProps> = ({ text, onClick }) => {
   return (

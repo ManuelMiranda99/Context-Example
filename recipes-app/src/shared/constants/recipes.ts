@@ -1,6 +1,6 @@
-import { RecipeInterface } from "../interfaces/RecipeInterface";
+import { Recipe } from "../interfaces/Recipe.interface";
 
-export const recipesData: RecipeInterface[] = [
+export const recipesData: Recipe[] = [
   {
     title: "Pizza",
     description:

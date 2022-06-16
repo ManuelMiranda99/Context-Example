@@ -42,5 +42,12 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!src/index.tsx"
+    ]
   }
 }

@@ -1,7 +1,16 @@
+import { useState } from "react";
+import { useUserContext } from "../../../shared/contexts/UserContext";
 import Button from "../../atoms/Button/Button";
 import Input from "../../atoms/Input/Input";
 
 const LoginForm = () => {
+  const { setUser } = useUserContext();
+  const [user, setUserState] = useState("");
+
+  const handleChangeUserName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserState(e.target.value);
+  };
+
   return (
     <div className="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
@@ -10,12 +19,16 @@ const LoginForm = () => {
         </h2>
         <form action="#" className="mt-8 space-y-6">
           <div className="-space-y-px rounded-md shadow-sm">
-            <Input placeholder="Username" type="text" />
+            <Input
+              placeholder="Username"
+              type="text"
+              onChange={handleChangeUserName}
+            />
             <Input placeholder="Password" type="password" position="BOTTOM" />
           </div>
 
           <div>
-            <Button text="Login" onClick={() => {}} />
+            <Button text="Login" onClick={() => setUser(user)} />
           </div>
         </form>
       </div>

@@ -1,6 +1,8 @@
+import { useUserContext } from "../../../shared/contexts/UserContext";
 import ToggleTheme from "../../atoms/ToggleTheme/ToggleTheme";
 
 const Navbar = () => {
+  const { user } = useUserContext();
   return (
     <div className="min-h-full">
       <div className="bg-gray-800">
@@ -10,7 +12,7 @@ const Navbar = () => {
               <ToggleTheme />
             </div>
             <div className="flex items-center ml-6 text-white">
-              <h3>USERNAME</h3>
+              <h3>{user}</h3>
             </div>
           </div>
         </div>
