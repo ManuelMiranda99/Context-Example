@@ -1,6 +1,8 @@
+import { useUserContext } from "../../../shared/context/UserContext/UserContext";
 import ToggleTheme from "../../atoms/ToggleTheme/ToggleTheme";
 
 const Navbar = () => {
+  const { user, setUser } = useUserContext();
   return (
     <div className="min-h-full">
       <div className="bg-gray-800">
@@ -10,7 +12,8 @@ const Navbar = () => {
               <ToggleTheme />
             </div>
             <div className="flex items-center ml-6 text-white">
-              <h3>USERNAME</h3>
+              {user && <h3 data-testid="userNameNav">{user}</h3>}
+              <button onClick={() => setUser("")}>Logout</button>
             </div>
           </div>
         </div>

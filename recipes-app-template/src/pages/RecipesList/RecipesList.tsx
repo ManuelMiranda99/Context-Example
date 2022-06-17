@@ -1,15 +1,14 @@
-import Input from "../../components/atoms/Input/Input";
 import Navbar from "../../components/molecules/Navbar/Navbar";
 import CardList from "../../components/organisms/CardList/CardList";
+import { RecipesListProvider } from "./RecipesListContext/RecipesListContext";
 
 const RecipesList = () => {
   return (
     <>
       <Navbar />
-      <div className="flex items-center w-2/6 mt-20 ml-72">
-        <Input placeholder="Search" type="text" />
-      </div>
-      <CardList />
+      <RecipesListProvider>
+        <CardList />
+      </RecipesListProvider>
     </>
   );
 };

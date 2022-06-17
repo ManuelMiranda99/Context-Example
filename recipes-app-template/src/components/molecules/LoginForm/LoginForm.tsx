@@ -1,7 +1,10 @@
+import { useUserContext } from "../../../shared/context/UserContext/UserContext";
 import Button from "../../atoms/Button/Button";
 import Input from "../../atoms/Input/Input";
 
 const LoginForm = () => {
+  const { setUser } = useUserContext();
+
   return (
     <div className="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
@@ -15,7 +18,12 @@ const LoginForm = () => {
           </div>
 
           <div>
-            <Button text="Login" onClick={() => {}} />
+            <Button
+              text="Login"
+              onClick={() => {
+                setUser("Manuel");
+              }}
+            />
           </div>
         </form>
       </div>
